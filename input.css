@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+.shop-bg-orange-1 {
+  background-color: #fcefe9;
+}
+
+.shop-orange-1 {
+  background-color: #fcefe9;
+}
+
+.shop-orange-4 {
+  color: #f96248;
+}
+
+.shop-bg-orange-4 {
+  background-color: #f96248;
+}
+
+.shop-blue-4 {
+  color: #11324f;
+}
+.shop-bg-blue-4 {
+  background-color: #11324f;
+}
+
+.shop-neutral-8 {
+  color: #0a0c0d;
+}
+
+.shop-neutral-6 {
+  color: #778089;
+}
+
+.shop-bg-neutral-3 {
+  background-color: #eeeff2;
+}
+
+.shop-neutral-3 {
+  background-color: #eeeff2;
+}
+
+.shop-yellow-4 {
+  color: #f3ac3d;
+}
+
+.shop-bg-yellow-4 {
+  background-color: #f3ac3d;
+}
+
+.shop-bg-purple-4 {
+  background-color: #a767b7;
+}
