@@ -195,9 +195,6 @@
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
-  .mt-\[16px\] {
-    margin-top: 16px;
-  }
   .mb-1 {
     margin-bottom: var(--spacing);
   }
@@ -207,11 +204,14 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
+  .mb-\[4px\] {
+    margin-bottom: 4px;
+  }
+  .mb-\[16px\] {
+    margin-bottom: 16px;
+  }
   .flex {
     display: flex;
-  }
-  .grid {
-    display: grid;
   }
   .hidden {
     display: none;
@@ -278,9 +278,6 @@
   .resize {
     resize: both;
   }
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .flex-col {
     flex-direction: column;
   }
@@ -290,17 +287,18 @@
   .items-end {
     align-items: flex-end;
   }
-  .items-start {
-    align-items: flex-start;
-  }
   .justify-between {
     justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
   }
-  .justify-start {
-    justify-content: flex-start;
+  .space-y-\[9\.12px\] {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(9.12px * var(--tw-space-y-reverse));
+      margin-block-end: calc(9.12px * calc(1 - var(--tw-space-y-reverse)));
+    }
   }
   .gap-x-1 {
     column-gap: var(--spacing);
@@ -322,15 +320,6 @@
   }
   .gap-y-6 {
     row-gap: calc(var(--spacing) * 6);
-  }
-  .place-self-start {
-    place-self: start;
-  }
-  .self-baseline {
-    align-self: baseline;
-  }
-  .self-stretch {
-    align-self: stretch;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -395,23 +384,11 @@
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
-  .px-9 {
-    padding-inline: calc(var(--spacing) * 9);
-  }
   .px-16 {
     padding-inline: calc(var(--spacing) * 16);
   }
   .px-16\.25 {
     padding-inline: calc(var(--spacing) * 16.25);
-  }
-  .px-\[16\.25\] {
-    padding-inline: 16.25;
-  }
-  .px-\[32px\] {
-    padding-inline: 32px;
-  }
-  .px-\[65px\] {
-    padding-inline: 65px;
   }
   .py-1 {
     padding-block: var(--spacing);
@@ -431,9 +408,6 @@
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
-  .py-\[14px\] {
-    padding-block: 14px;
-  }
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
   }
@@ -448,9 +422,6 @@
   }
   .text-center {
     text-align: center;
-  }
-  .align-baseline {
-    vertical-align: baseline;
   }
   .text-sm {
     font-size: var(--text-sm);
@@ -478,6 +449,10 @@
   .leading-6 {
     --tw-leading: calc(var(--spacing) * 6);
     line-height: calc(var(--spacing) * 6);
+  }
+  .leading-\[24px\] {
+    --tw-leading: 24px;
+    line-height: 24px;
   }
   .leading-\[150\%\] {
     --tw-leading: 150%;
@@ -552,6 +527,11 @@
   inherits: false;
   initial-value: 0;
 }
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -576,6 +556,7 @@
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
