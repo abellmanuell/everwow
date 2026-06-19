@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.container {
+  width: 1320px;
+}
+
 .shop-bg-orange-1 {
   background-color: #fcefe9;
 }
